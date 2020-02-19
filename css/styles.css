@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+}
+
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+	background:rgb(255, 255, 255); 
+
+}
+
+
+/*Header and first Section*/
+
+.header_top{
+    background-color: rgb(45,57,69);
+    text-align: center;
+    padding: 15px 0;
+}
+
+h1{ 
+	text-align: center;
+    font-size: 1.7em;
+    margin: 0 auto;
+    
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color:white;	
+}
+
+h2{
+font-size: 1.5em;
+margin: 0 auto;
+padding-top: 1.4em;
+}
+
+p{
+    padding-bottom: 1.4em;
+    font-size: 1em;
+    color: rgba(133, 133, 133, 0.692);
+}
+
+h1,h2 {
+	font-family: 'Questrial', sans-serif;
+	font-weight: bold;
+}
+
+
+header {
+    background: #141414;
+    text-align: center;
+	margin: -20px;
+	padding: 15px 0;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+	border-bottom: 2.1px solid #141414;
+	width: 100%;
+	margin:20px auto;
+	text-align: center;
+}
+
+/*border2*/
+section:after {
+	content:"";
+	display: block;
+	height: 2px;
+	margin-bottom: 3px;
+	width: 100%;
+	border-bottom: 4px solid black;
+}
+
+
+/*Contact Section*/
+
+form {
+	width: 100%;
+	margin: 30px auto;
+	font-family: 'Prompt', sans-serif;
+	font-weight: 300;
+	letter-spacing: .035em;
+	color: #141414;
+}
+
+fieldset {
+	border: 0;
+	padding:0;
+	margin-bottom: 20px;
+}
+
+fieldset:first-of-type {
+	border-bottom: solid black 1.35px;
+}
+
+legend {
+	font-size: 1.6em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding:20px;
+    
+}
+
+input::placeholder {
+	color: rgba(1, 27, 75, 0.3);
+	text-align: right;
+	font-family: 'Questrial', sans-serif;
+	font-style: italic;
+	font-size: .9em;
+}
+
+input[placeholder*="Option"]::placeholder, textarea::placeholder {
+	color: #C4CFD4;
+	font-size: .8em;
+}
+
+textarea::placeholder {
+	font-size: 1.725em;
+	font-style: italic;
+}
+
+.form-wrap {
+	display: flex;
+	flex-direction: column;
+
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+select[id="state"]
+{
+	width: 90%;
+	height: 3em;
+	padding: 10px 0;
+	margin: 10px;
+	border-radius: 5px;
+	flex-grow: 1;
+	background: #e7e4e4;
+    outline: thin;
+	font-size: 1em;
+	color: rgba(16, 16, 16, .8);
+
+}
+
+	.form-wrap label {
+        flex-basis: 20%;
+       
+	}
+	.form-wrap input,
+	.form-wrap select {
+        flex-basis: 75%;
+	}
+	input[id="zip"] {
+		max-width: 40%;
+	}
+
+input[type=text]:focus, 
+input[type=email]:focus,
+input[type=tel]:focus,
+select[id="state"]:focus {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+.check-with-label:checked + .label-for-check {
+    font-weight: bold;
+  }
+
+  input[type="radio"]:checked+label{ font-weight: bold; } 
+
+
+
+
+	/*Newsletter section */
+
+	.form-news {
+		padding: 10px 0 ;
+	}
+
+	label[class="form-news"],label[for="other_interests"] {
+		font-weight:400;
+		margin: 5px 0; 
+	}
+
+	textarea {
+		background: #efefef;
+        outline-color: rgba(20, 20, 20, .1);
+        width: 100%;
+        height: 80%;
+        
+		
+	}
+
+	/*Sign up button*/
+	.btn {
+	
+		display: flex;
+		justify-content: center;
+	}
+
+	button[type="submit"] {
+		padding:20px 30px;
+		font-size: 1.4em;
+		align-self: center;
+		background: #34b1aa;
+		color: #efefef;	
+		border-radius: 15px;
+		width: 100%;
+		font-family: 'Prompt', sans-serif;
+		font-weight: bold;
+		letter-spacing: .1em;
+        box-shadow:         3px 3px 5px 6px #ccc;   
+		outline: none;
+	}
+
+	button[type="submit"]:active {
+		letter-spacing: 0;
+	}
+
+	/*footer*/
+
+	footer {
+		text-align: center;
+		margin-top: 50px;
+	}
+
+
+
+    /*media quieries*/
+    
+  
+	@media(min-width:768px) {
+
+		form  {
+			max-width: 800px;
+		}
+		section {
+			width: 70%;
+            margin: 0 auto;
+            padding-top: 15px;
+		}
+		.form-wrap:not(:nth-child(9)){
+			flex-direction: row;
+			align-items: center;
+			/*justify-content: space-between;*/
+
+		}
+
+
+		input[type=text],
+		input[type=email],
+		input[type=tel],
+		select[id="state"]
+		{
+			max-width: 80%;
+			height: 3em;
+			padding: 10px 0;
+			margin: 10px;
+			border-radius: 5px;
+			flex-grow: 1;
+			background: #efefef;
+		}
+
+		input[id="zip"] {
+			max-width: 30%;
+		}
+
+	}
